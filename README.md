@@ -4,10 +4,7 @@ A studio-style guitar practice tool for building chord timelines and visualizing
 
 ## Screenshot
 
-Add a screenshot here:
-
-- `public/screenshot.png`
-- Update this section with an actual image once available.
+![Guitar Tutor App](screenshots/fretboard-caged.png)
 
 ## Features
 
