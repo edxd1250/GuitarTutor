@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -478,13 +479,25 @@ export default function ChordTimelineApp() {
       <header className="flex flex-col gap-2 border-b border-slate-800 pb-4">
         <p className="text-xs uppercase tracking-[0.4em] text-slate-500">Studio tool</p>
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <h1 className="text-3xl font-semibold text-slate-100">Chord Timeline Fretboard</h1>
-          <Link
-            href="/help"
-            className="text-xs uppercase tracking-[0.25em] text-slate-400 hover:text-slate-200 transition-colors"
-          >
-            Help
-          </Link>
+          <div className="space-y-1">
+            <h1 className="text-3xl font-semibold text-slate-100">Chord Timeline Fretboard</h1>
+            <Link
+              href="/help"
+              className="text-xs uppercase tracking-[0.25em] text-slate-400 hover:text-slate-200 transition-colors"
+            >
+              Help
+            </Link>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="text-xs uppercase tracking-[0.3em] text-slate-500">Preview</div>
+            <Image
+              src="/images/thumbnail.png"
+              alt="Chord Timeline Fretboard preview"
+              width={180}
+              height={120}
+              className="rounded-lg border border-slate-800/80 shadow-[0_10px_24px_rgba(0,0,0,0.45)]"
+            />
+          </div>
         </div>
         <p className="text-slate-400 text-sm max-w-2xl">
           Build a timeline of chords, hit play, and watch the fretboard update in time.
